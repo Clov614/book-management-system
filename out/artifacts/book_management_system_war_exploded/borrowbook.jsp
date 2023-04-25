@@ -1,12 +1,6 @@
-<%@ page import="top.faroz.dao.BookDao" %>
-<%@ page import="top.faroz.bean.Book" %>
-<%@ page import="java.util.List" %><%--
-  Created by IntelliJ IDEA.
-  User: faro_z
-  Date: 2021/1/3
-  Time: 下午10:32
-  To change this template use File | Settings | File Templates.
---%>
+<%@ page import="cn.clov614.dao.BookDao" %>
+<%@ page import="cn.clov614.bean.Book" %>
+<%@ page import="java.util.List" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -22,6 +16,60 @@
             font-size: 20px;
             color: blue;
             font-family: "Academy Engraved LET";
+        }
+        /*搜索框相关*/
+        .search-box {
+            position: relative;
+            width: 300px;
+            margin: 20px auto;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .search-box .icon {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        .search-box i {
+            color: #a0a5b1;
+        }
+
+        .search-box input:focus {
+            border-color: #3F51B5;
+            outline: none;
+        }
+
+        .search-box input:focus + .icon i {
+            color: #3F51B5;
+        }
+        /*复选框*/
+        .options {
+            /* 之前的样式 */
+        }
+
+        .left {
+            float: left;
+            width: 50%;
+        }
+
+        .right {
+            float: left;
+            width: 50%;
+        }
+
+        .options input {
+            /* input样式 */
+        }
+
+        .options label {
+            /* label样式 */
         }
     </style>
 
@@ -54,6 +102,17 @@
                });
            });
         });
+        // 搜素相关
+        $(document).ready(function () {
+            $("button[id='btn_search']").click(function () {
+                var searchStr=$("#search").val()
+                var radioValue = $("input[name='choice']:checked").val();
+                // 构造URL
+                var url = "/borrowbook.jsp?searchStr=" + searchStr + "&searchType=" + radioValue;
+                // 跳转至URL加载JSP页面
+                location.href = url;
+            });
+        });
     </script>
 </head>
 <body>
@@ -61,13 +120,44 @@
 <%@include file="include/readerheader.jsp"%>
 
 <%
-    BookDao bookDao = new BookDao();
-    List<Book> list = bookDao.list();
-    request.setAttribute("bookList",list);
+    String searchStr = request.getParameter("searchStr");
+    String radioValue = request.getParameter("searchType");
+    if (searchStr != null) {
+        request.setAttribute("searchText",searchStr); // 动态同步搜索框内容
+        if (radioValue.equals("isbn")) {
+            BookDao bookDao = new BookDao();
+            List<Book> list = bookDao.isbn2list(Integer.parseInt(searchStr));
+            request.setAttribute("bookList",list);
+        }else if (radioValue.equals("bname")) {
+            BookDao bookDao = new BookDao();
+            List<Book> list = bookDao.bname2list(searchStr);
+            request.setAttribute("bookList",list);
+        }
+    }else {
+        BookDao bookDao = new BookDao();
+        List<Book> list = bookDao.list();
+        request.setAttribute("bookList",list);
+    }
+
 
 %>
 
 <div style="    margin: auto;text-align: center" >
+    <div class="search-box">
+        <input id="search" type="text" placeholder="查找图书" value="${searchText}">
+        <span class="icon"><i class="fa fa-search"></i></span>
+        <div class="options">
+            <div class="left">
+                <input type="radio" name="choice" id="o1" value="isbn" checked="checked">
+                <label for="option1">isbn</label>
+            </div>
+            <div class="right">
+                <input type="radio" name="choice" id="o2" value="bname">
+                <label for="option2">书名</label>
+            </div>
+        </div>
+        <button style="margin-top: 10px" id="btn_search">Search</button>
+    </div>
     <p class="notice_head">所有书籍</p>
     <table  class="table table-striped" style="text-align: center;margin: auto;width: 80%">
         <tr style="text-align: center">

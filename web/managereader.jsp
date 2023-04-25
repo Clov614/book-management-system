@@ -1,13 +1,7 @@
-<%@ page import="top.faroz.dao.ReaderDao" %>
-<%@ page import="top.faroz.bean.Reader" %>
+<%@ page import="cn.clov614.dao.ReaderDao" %>
+<%@ page import="cn.clov614.bean.Reader" %>
 <%@ page import="java.util.List" %>
-<%@ page import="top.faroz.dao.ReaderBookDao" %><%--
-  Created by IntelliJ IDEA.
-  User: faro_z
-  Date: 2021/1/3
-  Time: 下午10:29
-  To change this template use File | Settings | File Templates.
---%>
+<%@ page import="cn.clov614.dao.ReaderBookDao" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <html>

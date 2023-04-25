@@ -1,12 +1,6 @@
-<%@ page import="top.faroz.dao.BookDao" %>
-<%@ page import="top.faroz.bean.Book" %>
-<%@ page import="javax.xml.transform.Source" %><%--
-  Created by IntelliJ IDEA.
-  User: faro_z
-  Date: 2021/1/4
-  Time: 下午4:41
-  To change this template use File | Settings | File Templates.
---%>
+<%@ page import="cn.clov614.dao.BookDao" %>
+<%@ page import="cn.clov614.bean.Book" %>
+<%@ page import="javax.xml.transform.Source" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>

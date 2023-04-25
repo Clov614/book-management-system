@@ -1,14 +1,8 @@
-<%@ page import="top.faroz.dao.BookDao" %>
-<%@ page import="top.faroz.bean.Reader" %>
-<%@ page import="top.faroz.service.BookService" %>
-<%@ page import="top.faroz.bean.Book" %>
-<%@ page import="java.util.List" %><%--
-  Created by IntelliJ IDEA.
-  User: faro_z
-  Date: 2021/1/3
-  Time: 下午10:32
-  To change this template use File | Settings | File Templates.
---%>
+<%@ page import="cn.clov614.dao.BookDao" %>
+<%@ page import="cn.clov614.bean.Reader" %>
+<%@ page import="cn.clov614.service.BookService" %>
+<%@ page import="cn.clov614.bean.Book" %>
+<%@ page import="java.util.List" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -57,6 +51,7 @@
 
 <%
     Reader reader = (Reader) request.getSession().getAttribute("user");
+    System.out.println(reader);
     List<Book> bookList = new BookService().getBorrowBook(reader.getId());
     //获取的是读者所借阅的所有图书
     request.setAttribute("bookList",bookList);

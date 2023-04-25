@@ -766,14 +766,15 @@ public List<Book> list() {
 > ajax中，要求访问的地址，是/borrowbook，这要在.xml中匹配，转移到对应的servlet中
 
 ```xml
- <servlet>
-        <servlet-name>BorrowBookServlet</servlet-name>
-        <servlet-class>top.faroz.servlet.BorrowBookServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>BorrowBookServlet</servlet-name>
-        <url-pattern>/borrowbook</url-pattern>
-    </servlet-mapping>
+
+<servlet>
+    <servlet-name>BorrowBookServlet</servlet-name>
+    <servlet-class>BorrowBookServletcn.clov614.servlet.BorrowBookServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>BorrowBookServlet</servlet-name>
+<url-pattern>/borrowbook</url-pattern>
+</servlet-mapping>
 ```
 
 * **Servlet：**

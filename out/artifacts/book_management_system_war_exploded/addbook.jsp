@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: faro_z
-  Date: 2021/1/6
-  Time: 上午2:08
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -44,8 +37,13 @@
                         alert("登录错误");
                     },
                     success: function (data) {
-                        alert("添加成功！");
-                        window.location.href="/managebook.jsp";
+                        if (data==-1) {
+                            alert("ISBN号已存在，请检查ISBN号是否正确")
+                        }
+                        else {
+                            alert("添加成功！");
+                            window.location.href="/managebook.jsp";
+                        }
 
                     }
                 });
