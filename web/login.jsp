@@ -15,7 +15,6 @@
 <%--    </style>--%>
     <style>
         * {
-            box-sizing: border-box;
             font-family: '萝莉体 第二版';
         }
         body{

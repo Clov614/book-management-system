@@ -64,7 +64,6 @@
 
 <%
     String bookISBN = request.getParameter("bookISBN");
-    System.out.println(bookISBN);
     BookDao bookDao = new BookDao();
     Book book = bookDao.get(Integer.parseInt(bookISBN));
     request.setAttribute("book",book);

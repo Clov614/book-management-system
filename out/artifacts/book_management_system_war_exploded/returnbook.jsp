@@ -64,7 +64,6 @@
 
 <%
     Reader reader = (Reader) request.getSession().getAttribute("user");
-    System.out.println(reader);
     List<Book> bookList = new BookService().getBorrowBook(reader.getId());
     //获取的是读者所借阅的所有图书
     request.setAttribute("bookList",bookList);
