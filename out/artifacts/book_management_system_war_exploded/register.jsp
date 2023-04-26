@@ -7,10 +7,13 @@
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
     <script type="text/javascript" src="js/login.js"></script>
     <style>
+        * {
+            font-family: '萝莉体 第二版';
+        }
         html,body {
             background-color: antiquewhite;
-            background-image:url("./img/bkground.jpg");
-            background-size: 100% 100%;
+            background-image:url("./img/bg.jpg");
+            background-size: cover;
             height: 100%;
         }
     </style>

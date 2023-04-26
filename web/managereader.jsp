@@ -9,6 +9,17 @@
     <title>读者管理</title>
     <%@include file="include/taglib.jsp"%>
 </head>
+<style>
+    * {
+        font-family: '萝莉体 第二版';
+    }
+    table{
+        background: pink;
+    }
+    th{
+        background: #bea4fd;
+    }
+</style>
 <body>
 <%@include file="include/adminheader.jsp"%>
 

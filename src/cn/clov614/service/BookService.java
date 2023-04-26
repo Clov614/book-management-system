@@ -25,7 +25,6 @@ public class BookService {
         List<Book> books = new ArrayList<>();
         ReaderBookDao readerBookDao = new ReaderBookDao();
         List<ReaderBook> list = readerBookDao.list();
-        System.out.println(readerID);
         //筛选指定id的读者
         list = list.stream()
                 .filter(user -> user.getReader_id()==readerID)
@@ -39,8 +38,6 @@ public class BookService {
         }
         //将读者借阅的图书，放入结果集中
         for (ReaderBook readerBook : list) {
-            System.out.println(readerBook.getReader_id());
-            System.out.println(readerBook.getBook_ISBN());
             books.add(bookMap.get(readerBook.getBook_ISBN()));
         }
         return books;

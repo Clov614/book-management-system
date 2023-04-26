@@ -10,6 +10,14 @@
     <%@include file="include/taglib.jsp"%>
 
     <style>
+        * {
+            font-family: '萝莉体 第二版';
+        }
+        body{
+            background-image: url("./img/bodybg.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
         th {
             text-align: center;
         }
@@ -17,7 +25,12 @@
             text-align: center;
             font-size: 20px;
             color: blue;
-            font-family: "Academy Engraved LET";
+        }
+        table{
+            background: pink;
+        }
+        th{
+            background: #bea4fd;
         }
     </style>
 
@@ -51,7 +64,6 @@
 
 <%
     Reader reader = (Reader) request.getSession().getAttribute("user");
-    System.out.println(reader);
     List<Book> bookList = new BookService().getBorrowBook(reader.getId());
     //获取的是读者所借阅的所有图书
     request.setAttribute("bookList",bookList);

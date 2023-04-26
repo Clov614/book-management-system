@@ -11,11 +11,24 @@
     <%@include file="include/taglib.jsp"%>
 </head>
 <style>
+    * {
+        font-family: '萝莉体 第二版';
+    }
+    body{
+        background-image: url("./img/bodybg.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
     .notice_head {
         text-align: center;
         font-size: 20px;
         color: blue;
-        font-family: "Academy Engraved LET";
+    }
+    table{
+        background: pink;
+    }
+    th{
+        background: #bea4fd;
     }
 </style>
 <body>
@@ -39,7 +52,6 @@
             <th>ISBN</th>
             <th>作者</th>
             <th>价格</th>
-            <th>剩余数量</th>
             <th>借阅时间</th>
         </tr>
         <c:forEach items="${bookList}" var="book" varStatus="st">
@@ -49,7 +61,6 @@
                 <td>${book.isbn}</td>
                 <td>${book.writer}</td>
                 <td>${book.price}</td>
-                <td>${book.num}</td>
                 <td>${book.time}</td>
             </tr>
         </c:forEach>

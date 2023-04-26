@@ -8,8 +8,22 @@
     <%@include file="include/taglib.jsp"%>
 
     <style>
+        * {
+            font-family: '萝莉体 第二版';
+        }
+        body{
+            background-image: url("./img/bodybg.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
         th {
             text-align: center;
+        }
+        table{
+            background: pink;
+        }
+        th{
+            background: #bea4fd;
         }
     </style>
 </head>

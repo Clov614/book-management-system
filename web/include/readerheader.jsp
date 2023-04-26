@@ -34,7 +34,7 @@
 
         <div class="collapse navbar-collapse header" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="./readerindex.jsp">首页 <span class="sr-only">(current)</span></a></li>
+                <li class="active"><a href="./readerindex.jsp">首页<span class="sr-only">(current)</span></a></li>
                 <li><a href="./borrowbook.jsp">图书借阅</a></li>
                 <li><a href="./returnbook.jsp">图书归还</a></li>
                 <li><a href="./history.jsp">借阅历史</a></li>

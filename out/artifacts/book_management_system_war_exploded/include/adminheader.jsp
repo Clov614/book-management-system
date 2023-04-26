@@ -33,7 +33,7 @@
 
         <div class="collapse navbar-collapse header" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="../index.jsp">首页 <span class="sr-only">(current)</span></a></li>
+                <li class="active"><a href="../index.jsp">首页<span class="sr-only">(current)</span></a></li>
                 <li><a href="../managebook.jsp">管理图书</a></li>
                 <li><a href="../managereader.jsp">管理借阅</a></li>
             </ul>

@@ -3,17 +3,20 @@
 <html>
 <head>
     <title>读者首页</title>
-    <title>欢迎使用图书管理系统</title>
     <%@include file="include/taglib.jsp"%>
     <style>
         * {
             box-sizing: border-box;
+            font-family: '萝莉体 第二版';
         }
 
         /* body 样式 */
         body {
-            font-family: Arial;
+            font-family: '萝莉体 第二版';
             margin: 0;
+            background-image: url("./img/bodybg.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
         }
 
         /* 列容器 */
@@ -29,12 +32,13 @@
         .side {
             -ms-flex: 30%; /* IE10 */
             flex: 30%;
-            background-color: #f1f1f1;
+            background: rgb(190, 164, 253);
             padding: 20px;
         }
 
         /* 主要的内容区域 */
         .main {
+            background: rgba(250, 165, 165, 0.71);
             -ms-flex: 70%; /* IE10 */
             flex: 70%;
             background-color: white;
@@ -43,7 +47,7 @@
 
         /* 测试图片 */
         .text_area {
-            background-color: #aaa;
+            background: rgba(250, 165, 165, 0.71);
             width: 100%;
             padding: 20px;
         }
@@ -64,7 +68,7 @@
         }
 
         .welcome_head {
-            color: blue;
+            color: 	#FF4040;
             font: 0.875em/1.5em"微软雅黑", "PTSans", "Arial", sans-serif;
             font-size: 30px;
             text-align: center;
@@ -82,18 +86,24 @@
 
             margin-top: 15px;
         }
+        .container{
+            background-image: url("./img/bodybg.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
     </style>
 </head>
 <body>
 
 <%@include file="include/readerheader.jsp"%>
-<h1 class="welcome_head">欢迎使用图书管理系统</h1>
-<div class="row" style="background-image: url('./img/yln.jpg')">
-        </div>
+<div class="container">
+    <h1 class="welcome_head">欢迎使用图书管理系统</h1>
+    <div class="row" style="background-image: url('./img/yln.jpg')">
     </div>
-    <div class="main">
-        <h2>项目介绍</h2>
-        <div class="text_area">
+</div>
+<div class="main">
+    <h2>项目介绍</h2>
+    <div class="text_area">
         <pre>
 本系虽然是简单的CRUD，但也是一个从无到有的过程
 系统包含管理员和读者
@@ -116,15 +126,16 @@
 其他部分：
   系统包含了完整的登录注册判断
         </pre>
-        </div>
-        <br>
-        <h2>联系我们</h2>
-        <div class="text_area">
+    </div>
+    <br>
+    <h2>联系我们</h2>
+    <div class="text_area">
         <pre>
             <a href="https://blog.iaimi.cn/">个人小站 https://blog.iaimi.cn/</a>
         </pre>
-        </div>
     </div>
+</div>
+</div>
 </div>
 
 

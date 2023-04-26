@@ -8,12 +8,25 @@
     <%@include file="include/taglib.jsp"%>
 
     <style>
+        * {
+            font-family: '萝莉体 第二版';
+        }
+        body{
+            background-image: url("./img/bodybg.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
         .notice_head {
             text-align: center;
             font-size: 20px;
             color: blue;
-            font-family: "Academy Engraved LET";
             margin-top: 40px;
+        }
+        table{
+            background: pink;
+        }
+        th{
+            background: #bea4fd;
         }
     </style>
 
@@ -51,7 +64,6 @@
 
 <%
     String bookISBN = request.getParameter("bookISBN");
-    System.out.println(bookISBN);
     BookDao bookDao = new BookDao();
     Book book = bookDao.get(Integer.parseInt(bookISBN));
     request.setAttribute("book",book);

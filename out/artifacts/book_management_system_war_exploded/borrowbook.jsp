@@ -8,6 +8,14 @@
     <%@include file="include/taglib.jsp"%>
 
     <style>
+        * {
+            font-family: '萝莉体 第二版';
+        }
+        body{
+            background-image: url("./img/bodybg.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
         th {
             text-align: center;
         }
@@ -15,7 +23,6 @@
             text-align: center;
             font-size: 20px;
             color: blue;
-            font-family: "Academy Engraved LET";
         }
         /*搜索框相关*/
         .search-box {
@@ -71,6 +78,12 @@
         .options label {
             /* label样式 */
         }
+        table{
+            background: pink;
+        }
+        th{
+            background: #bea4fd;
+        }
     </style>
 
     <script>
@@ -122,7 +135,7 @@
 <%
     String searchStr = request.getParameter("searchStr");
     String radioValue = request.getParameter("searchType");
-    if (searchStr != null) {
+    if (searchStr != null && !searchStr.equals("")) {
         request.setAttribute("searchText",searchStr); // 动态同步搜索框内容
         if (radioValue.equals("isbn")) {
             BookDao bookDao = new BookDao();

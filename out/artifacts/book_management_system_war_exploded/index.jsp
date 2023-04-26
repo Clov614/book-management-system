@@ -6,13 +6,16 @@
     <%@include file="include/taglib.jsp"%>
     <style>
       * {
-        box-sizing: border-box;
+        box-sizing: border-box;font-family: '萝莉体 第二版';
       }
 
       /* body 样式 */
       body {
-        font-family: Arial;
-        margin: 0;
+          font-family: '萝莉体 第二版';
+          margin: 0;
+          background-image: url("./img/bodybg.jpg");
+          background-size: cover;
+          background-repeat: no-repeat;
       }
 
       /* 列容器 */
@@ -26,23 +29,23 @@
       /* 创建两个列 */
       /* 边栏 */
       .side {
+          background: rgb(190, 164, 253);
         -ms-flex: 30%; /* IE10 */
         flex: 30%;
-        background-color: #f1f1f1;
         padding: 20px;
       }
 
       /* 主要的内容区域 */
       .main {
         -ms-flex: 70%; /* IE10 */
+          background: rgba(250, 165, 165, 0.71);
         flex: 70%;
-        background-color: white;
         padding: 20px;
       }
 
       /* 测试图片 */
       .text_area {
-        background-color: #aaa;
+          background: rgba(250, 165, 165, 0.71);
         width: 100%;
         padding: 20px;
       }
@@ -63,11 +66,10 @@
       }
 
       .welcome_head {
-        color: blue;
+        color: 	#FF4040;
         font: 0.875em/1.5em"微软雅黑", "PTSans", "Arial", sans-serif;
         font-size: 30px;
         text-align: center;
-        /*background-color: #aaaaaa;*/
         width: 100%;
       }
 
@@ -78,23 +80,28 @@
         color: #f1f1f1;
         font: 20px/1 Tahoma,Helvetica,Arial,"\5b8b\4f53",sans-serif;
         line-height: 30px;
-
         margin-top: 15px;
+      }
+      .container{
+          background-image: url("./img/bodybg.jpg");
+          background-size: cover;
+          background-repeat: no-repeat;
       }
     </style>
   </head>
   <body>
   <%@include file="include/adminheader.jsp"%>
 
-  <h1 class="welcome_head">欢迎使用图书管理系统</h1>
-  <div class="row" style="background-image: url('./img/yln.jpg')">
-    <div class="side">
-      <h3>更多内容</h3>
+  <div class="container">
+      <h1 class="welcome_head">欢迎使用图书管理系统</h1>
+      <div class="row">
+          <div class="side">
+              <h3>更多内容</h3>
 
-    </div>
-    <div class="main">
-      <h2>项目介绍</h2>
-      <div class="text_area">
+          </div>
+          <div class="main">
+              <h2>项目介绍</h2>
+              <div class="text_area">
         <pre>
 本系虽然是简单的CRUD，但也是一个从无到有的过程
 系统包含管理员和读者
@@ -117,15 +124,16 @@
 其他部分：
   系统包含了完整的登录注册判断
         </pre>
-      </div>
-      <br>
-      <h2>联系我们</h2>
-      <div class="text_area">
+              </div>
+              <br>
+              <h2>联系我们</h2>
+              <div class="text_area">
         <pre>
             <a href="https://blog.iaimi.cn/">个人小站 https://blog.iaimi.cn/</a>
         </pre>
+              </div>
+          </div>
       </div>
-    </div>
   </div>
 
 
