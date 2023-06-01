@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DBUtil {
-    private static final String url="jdbc:mysql://localhost:3306/db?useUnicode=true&characterEncoding=utf8";
+    private static final String url="sh-cynosdbmysql-grp-9zelcs0o.sql.tencentcdb.com:26322/db?useUnicode=true&characterEncoding=utf8";
     // private static final String url="jdbc:mysql:///book_management_db";
     private static final String name="root";
     private static final String password="i614614.";
