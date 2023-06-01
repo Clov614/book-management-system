@@ -8,13 +8,7 @@ import cn.clov614.dao.ReaderBookDao;
 import java.util.*;
 import java.util.stream.Collectors;
 
-/**
- * @ClassName BookService
- * @Description TODO
- * @Author FARO_Z
- * @Date 2021/1/6 上午12:43
- * @Version 1.0
- **/
+
 public class BookService {
     /**
      * 获取读者借阅的所有图书

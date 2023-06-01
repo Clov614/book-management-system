@@ -1,12 +1,6 @@
 package cn.clov614.bean;
 
-/**
- * @ClassName Book
- * @Description TODO
- * @Author FARO_Z
- * @Date 2021/1/3 下午8:41
- * @Version 1.0
- **/
+
 public class Book {
     private String name;
     private float price;

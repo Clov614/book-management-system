@@ -4,13 +4,6 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-/**
- * @ClassName DBUtil
- * @Description 数据库工具类
- * @Author FARO_Z
- * @Date 2020/11/13 3:42 下午
- * @Version 1.0
- **/
 public class DBUtil {
     private static final String url="jdbc:mysql://localhost:3306/db?useUnicode=true&characterEncoding=utf8";
     // private static final String url="jdbc:mysql:///book_management_db";

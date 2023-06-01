@@ -7,13 +7,6 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * @ClassName ReaderDao
- * @Description TODO
- * @Author FARO_Z
- * @Date 2021/1/3 下午8:54
- * @Version 1.0
- **/
 public class ReaderDao {
     public int getTotal() {
         int total=0;

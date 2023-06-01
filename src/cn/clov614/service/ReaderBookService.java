@@ -9,13 +9,6 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.List;
 
-/**
- * @ClassName ReaderBookService
- * @Description TODO
- * @Author FARO_Z
- * @Date 2021/1/4 下午2:21
- * @Version 1.0
- **/
 public class ReaderBookService {
     public ReaderBook getByReaderAndBook(int id, int ISBN) {
         ReaderBookDao readerBookDao = new ReaderBookDao();

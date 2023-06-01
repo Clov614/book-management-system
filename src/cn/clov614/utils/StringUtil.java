@@ -1,12 +1,5 @@
 package cn.clov614.utils;
 
-/**
- * @ClassName StringUtil
- * @Description TODO
- * @Author FARO_Z
- * @Date 2020/12/10 下午5:39
- * @Version 1.0
- **/
 public class StringUtil {
     /**
      * 判断字符串是否为空

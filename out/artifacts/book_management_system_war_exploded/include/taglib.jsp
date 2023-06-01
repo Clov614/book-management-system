@@ -1,10 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: faro_z
-  Date: 2020/12/9
-  Time: 上午8:15
-  所有需要使用的第三方插件
---%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%--使用jstl标签--%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>

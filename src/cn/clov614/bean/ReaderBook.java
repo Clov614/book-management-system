@@ -5,8 +5,8 @@ package cn.clov614.bean;
  * @Description 用于管理读者的书本借阅
  * 一行数据，代表该读者借了这本书
  * 每个读者，同一本书，只能借一本
- * @Author FARO_Z
- * @Date 2021/1/3 下午9:48
+ * @Author Clov614
+ * @Date 2023/4/25 下午9:48
  * @Version 1.0
  **/
 public class ReaderBook {

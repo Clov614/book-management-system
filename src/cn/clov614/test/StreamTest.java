@@ -4,13 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-/**
- * @ClassName StreamTest
- * @Description TODO
- * @Author FARO_Z
- * @Date 2021/1/6 上午12:48
- * @Version 1.0
- **/
 public class StreamTest {
     public static void main(String[] args) {
         Guy g1 = new Guy(1, "haha");
